@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ariqt/data-employeedetails": ["libs/data-employeedetails/src/index.ts"],
+      "@ariqt/feature-employee-central": [
+        "libs/feature-employee-central/src/index.ts"
+      ],
+      "@ariqt/ui-navbar": ["libs/ui-navbar/src/index.ts"],
+      "@ariqt/util-filter": ["libs/util-filter/src/index.ts"],
+      "@ariqt/util-sort": ["libs/util-sort/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

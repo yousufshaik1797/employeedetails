@@ -1,0 +1,34 @@
+<h2 style="padding-top: 20px">Employee Dashboard</h2>
+
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter a name"
+    [(ngModel)]="searchString"
+  />
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon1">Search</span>
+  </div>
+</div>
+<!-- {{searchString}} -->
+<table class="table table-striped border mt-1">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Mail</th>
+      <th scope="col">Role</th>
+      <th scope="col">Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of allEmployees | dataFilter: searchString:'name' ">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.mail }}</td>
+      <td>{{ employee.role }}</td>
+      <td>{{ employee.contact }}</td>
+    </tr>
+  </tbody>
+</table>
